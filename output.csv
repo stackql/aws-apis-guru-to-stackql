@@ -1,0 +1,16 @@
+operationId,path,verb,sqlVerb
+CreateCluster,/#X-Amz-Target=BaldrApiService.CreateCluster,post,insert
+DeleteCluster,/#X-Amz-Target=BaldrApiService.DeleteCluster,post,delete
+DescribeClusters,/#X-Amz-Target=BaldrApiService.DescribeClusters,post,select
+InitializeCluster,/#X-Amz-Target=BaldrApiService.InitializeCluster,post,
+ModifyCluster,/#X-Amz-Target=BaldrApiService.ModifyCluster,post,
+CreateHsm,/#X-Amz-Target=BaldrApiService.CreateHsm,post,insert
+DeleteHsm,/#X-Amz-Target=BaldrApiService.DeleteHsm,post,delete
+CopyBackupToRegion,/#X-Amz-Target=BaldrApiService.CopyBackupToRegion,post,
+DeleteBackup,/#X-Amz-Target=BaldrApiService.DeleteBackup,post,delete
+DescribeBackups,/#X-Amz-Target=BaldrApiService.DescribeBackups,post,select
+ModifyBackupAttributes,/#X-Amz-Target=BaldrApiService.ModifyBackupAttributes,post,
+RestoreBackup,/#X-Amz-Target=BaldrApiService.RestoreBackup,post,
+ListTags,/#X-Amz-Target=BaldrApiService.ListTags,post,select
+TagResource,/#X-Amz-Target=BaldrApiService.TagResource,post,
+UntagResource,/#X-Amz-Target=BaldrApiService.UntagResource,post,

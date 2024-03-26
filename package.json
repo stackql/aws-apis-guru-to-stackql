@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "csv-parser": "^3.0.0",
+    "fs": "^0.0.1-security",
+    "js-yaml": "^4.1.0",
+    "yaml": "^2.4.1"
+  }
+}
