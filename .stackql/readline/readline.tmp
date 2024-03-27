@@ -1,4 +1,0 @@
-registry pull aws;
-show services in aws;
-show resources in aws.cludhsmv2;
-show resources in aws.cloudhsmv2;
