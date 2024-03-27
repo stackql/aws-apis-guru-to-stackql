@@ -1,2 +1,4 @@
 openapi-directory/
 node_modules/
+.stackql/
+stackql*

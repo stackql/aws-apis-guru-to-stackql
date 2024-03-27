@@ -1,154 +1,174 @@
 components:
   x-stackQL-resources:
-    resources:
-      name: resources
+    clusters:
+      name: clusters
       methods:
-        createcluster_resource:
+        create_cluster:
           operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.CreateCluster/post'
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.CreateCluster/post'
           request:
             mediaType: application/x-amz-json-1.0
           response:
             mediaType: application/json
             openAPIDocKey: '200'
-        deletecluster_resource:
+        delete_cluster:
           operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.DeleteCluster/post'
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.DeleteCluster/post'
           request:
             mediaType: application/x-amz-json-1.0
           response:
             mediaType: application/json
             openAPIDocKey: '200'
-        describeclusters_resource:
+        describe_clusters:
           operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.DescribeClusters/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-            objectKey: $.ResourceDescriptions
-        initializecluster_resource:
-          operation:
-            $ref: >-
-              #/paths/%2F%23X-Amz-Target%3DBaldrApiService.InitializeCluster/post
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        modifycluster_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.ModifyCluster/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        createhsm_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.CreateHsm/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        deletehsm_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.DeleteHsm/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        copybackuptoregion_resource:
-          operation:
-            $ref: >-
-              #/paths/%2F%23X-Amz-Target%3DBaldrApiService.CopyBackupToRegion/post
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        deletebackup_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.DeleteBackup/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        describebackups_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.DescribeBackups/post'
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.DescribeClusters/post'
           request:
             mediaType: application/x-amz-json-1.0
           response:
             mediaType: application/json
             openAPIDocKey: '200'
             objectKey: $.ResourceDescriptions
-        modifybackupattributes_resource:
+        initialize_cluster:
           operation:
-            $ref: >-
-              #/paths/%2F%23X-Amz-Target%3DBaldrApiService.ModifyBackupAttributes/post
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.InitializeCluster/post'
           request:
             mediaType: application/x-amz-json-1.0
           response:
             mediaType: application/json
             openAPIDocKey: '200'
-        restorebackup_resource:
+        modify_cluster:
           operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.RestoreBackup/post'
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.ModifyCluster/post'
           request:
             mediaType: application/x-amz-json-1.0
           response:
             mediaType: application/json
             openAPIDocKey: '200'
-        listtags_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.ListTags/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-            objectKey: $.ResourceDescriptions
-        tagresource_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.TagResource/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-        untagresource_resource:
-          operation:
-            $ref: '#/paths/%2F%23X-Amz-Target%3DBaldrApiService.UntagResource/post'
-          request:
-            mediaType: application/x-amz-json-1.0
-          response:
-            mediaType: application/json
-            openAPIDocKey: '200'
-      id: aws.cloud_control.resources
+      id: aws.cloudhsmv2.clusters
       sqlVerbs:
         delete:
-          - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/deletecluster_resource
-          - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/deletehsm_resource
-          - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/deletebackup_resource
+          - $ref: '#/components/x-stackQL-resources/clusters/methods/delete_cluster'
         insert:
-          - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/createcluster_resource
-          - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/createhsm_resource
+          - $ref: '#/components/x-stackQL-resources/clusters/methods/create_cluster'
         select:
           - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/describeclusters_resource
-          - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/describebackups_resource
-          - $ref: >-
-              #/components/x-stackQL-resources/resources/methods/listtags_resource
+              #/components/x-stackQL-resources/clusters/methods/describe_clusters
         update: []
-      title: resources
+      title: clusters
+    hsm:
+      name: hsm
+      methods:
+        create_hsm:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.CreateHsm/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        delete_hsm:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.DeleteHsm/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+      id: aws.cloudhsmv2.hsm
+      sqlVerbs:
+        delete:
+          - $ref: '#/components/x-stackQL-resources/hsm/methods/delete_hsm'
+        insert:
+          - $ref: '#/components/x-stackQL-resources/hsm/methods/create_hsm'
+        select: []
+        update: []
+      title: hsm
+    backups:
+      name: backups
+      methods:
+        copy_backup_to_region:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.CopyBackupToRegion/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        delete_backup:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.DeleteBackup/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        describe_backups:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.DescribeBackups/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+            objectKey: $.ResourceDescriptions
+        modify_backup_attributes:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.ModifyBackupAttributes/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        restore_backup:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.RestoreBackup/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+      id: aws.cloudhsmv2.backups
+      sqlVerbs:
+        delete:
+          - $ref: '#/components/x-stackQL-resources/backups/methods/delete_backup'
+        insert: []
+        select:
+          - $ref: '#/components/x-stackQL-resources/backups/methods/describe_backups'
+        update: []
+      title: backups
+    tags:
+      name: tags
+      methods:
+        list_tags:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.ListTags/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+            objectKey: $.ResourceDescriptions
+        tag_resource:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.TagResource/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+        untag_resource:
+          operation:
+            $ref: '#/paths//#X-Amz-Target=BaldrApiService.UntagResource/post'
+          request:
+            mediaType: application/x-amz-json-1.0
+          response:
+            mediaType: application/json
+            openAPIDocKey: '200'
+      id: aws.cloudhsmv2.tags
+      sqlVerbs:
+        delete: []
+        insert: []
+        select:
+          - $ref: '#/components/x-stackQL-resources/tags/methods/list_tags'
+        update: []
+      title: tags

@@ -1,0 +1,54 @@
+id: aws
+name: aws
+version: v24.03.00220
+providerServices:
+  cloudhsmv2:
+    id: cloudhsmv2:v24.03.00220
+    name: cloudhsmv2
+    preferred: true
+    service:
+      $ref: aws/v24.03.00220/services/cloudhsmv2.yaml
+    title: cloudhsmv2
+    version: v24.03.00220
+    description: ec2
+  ec2:
+    id: ec2:v24.03.00220
+    name: ec2
+    preferred: true
+    service:
+      $ref: aws/v24.03.00220/services/ec2.yaml
+    title: ec2
+    version: v24.03.00220
+    description: ec2
+  iam:
+    id: iam:v24.03.00220
+    name: iam
+    preferred: true
+    service:
+      $ref: aws/v24.03.00220/services/iam.yaml
+    title: iam
+    version: v24.03.00220
+    description: iam
+  s3:
+    id: s3:v24.03.00220
+    name: s3
+    preferred: true
+    service:
+      $ref: aws/v24.03.00220/services/s3.yaml
+    title: s3
+    version: v24.03.00220
+    description: s3
+  cloud_control:
+    id: cloud_control:v24.03.00220
+    name: cloud_control
+    preferred: true
+    service:
+      $ref: aws/v24.03.00220/services/cloud_control.yaml
+    title: cloud_control
+    version: v24.03.00220
+    description: cloud_control
+config:
+  auth:
+    type: aws_signing_v4
+    credentialsenvvar: AWS_SECRET_ACCESS_KEY
+    keyIDenvvar: AWS_ACCESS_KEY_ID
